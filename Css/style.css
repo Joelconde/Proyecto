@@ -7,13 +7,30 @@ body {
     color: #ffffff;
 }
 
+.background-image {
+    position: absolute; /* Posiciona la imagen de forma absoluta */
+    top: 0; /* Alinea a la parte superior */
+    left: 0; /* Alinea a la parte izquierda */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100%; /* Ocupa toda la altura */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    filter: blur(2px); /* Aplica el desenfoque a la imagen */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
+.scale-image {
+    width: 400px;  /* Ajusta a tu tamaño deseado */
+    height: 400px; /* Ajusta a tu tamaño deseado */
+}
+
+
 /* Estilo del carrusel */
 .carousel {
     position: relative;
     width: 100%;
     height: 400px;
     overflow: hidden;
-    background-color: #1e1e1e;
+    /* background-color: #1e1e1e; */
 }
 
 .carousel-slide {
