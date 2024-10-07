@@ -1,16 +1,14 @@
-CREATE DATABASE Izeta3;
+CREATE DATABASE valoraciones_db;
 
-CREATE TABLE Musicos (
-    id_musico INT PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(100),
-    genero VARCHAR(100),
-    biografia TEXT,
-    fecha_nacimiento DATE
+USE valoraciones_db;
+
+CREATE TABLE valoraciones (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    nombre_usuario VARCHAR(255) NOT NULL,
+    comentario TEXT NOT NULL,
+    puntuacion INT(1) NOT NULL CHECK (puntuacion BETWEEN 1 AND 5),
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE Albumes (
-);
-
-CREATE TABLE 
 
 
