@@ -2,7 +2,7 @@
 // Conectar a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "1234";
+$password = "pirineus";
 $dbname = "valoraciones_db";
 
 // Crear la conexión
