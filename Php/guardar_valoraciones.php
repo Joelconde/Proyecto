@@ -6,14 +6,14 @@ $password = "pirineus";
 $dbname = "valoraciones_db";
 
 // Crear la conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Verificar la conexión
 if ($conn->connect_error) {
     die("Conexión fallida: ".$conn->connect_error);
 }
 
-// Recibir los daots del formulario
+// Recibir los datos del formulario
 $nombre_usuario = $_POST['nombre_usuario'];
 $comentario = $_POST['comentario'];
 $puntuacion = $_POST['puntuacion'];
