@@ -6,11 +6,11 @@ $password = "pirineus";
 $dbname = "valoraciones_db";
 
 // Crear la conexión
-$conn = mysqli_connect('localhost', 'root', 'pirineus', 'valoraciones_db');
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: ".$conn->connect_error);
+if (!$conn) {
+    die("Conexión fallida: " . mysqli_connect_error());
 }
 
 // Recibir los datos del formulario
