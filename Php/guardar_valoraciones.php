@@ -23,15 +23,15 @@ if (!empty($nombre_usuario) && !empty($comentario) && !empty($puntuacion)) {
 $sql = "INSERT INTO valoraciones (nombre,comentario,puntuacion) VALUES
 ('$nombre_usuario','$comentario','$puntuacion')";
 
-if ($conn->query($sql) === TRUE) {
+if (mysqli_query($conn, $sql)) {
     echo "Valoración guardad con éxito";
 } else {
-    echo"Error: ".$sql. "<br>".$conn->error;
+    echo"Error: ".$sql. "<br>". mysqli_error($conn);
 }
 } else {
     echo "Todos los campos son obligatorios. ";
 }
 
 // Cerrar la conexión
-$conn->close();
+mysqli_close($conn);    
 ?>
