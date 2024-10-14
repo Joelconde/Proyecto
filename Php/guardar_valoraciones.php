@@ -14,7 +14,7 @@ if (!$conn) {
 }
 
 // Recibir los datos del formulario
-$nombre_usuario = $_POST['nombre_usuario'];
+$nombre_usuario = mysqli_real_escape_string($conn, $_POST['nombre_usuario']);
 $comentario = $_POST['comentario'];
 $puntuacion = $_POST['puntuacion'];
 
