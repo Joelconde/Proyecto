@@ -13,10 +13,10 @@ if (!$conn) {
     die("Conexión fallida: " . mysqli_connect_error());
 }
 
-// Recibir los datos del formulario
+// Recibir los datos del formulario y escaparlos para evitar errores SQL.
 $nombre_usuario = mysqli_real_escape_string($conn, $_POST['nombre_usuario']);
-$comentario = $_POST['comentario'];
-$puntuacion = $_POST['puntuacion'];
+$comentario = mysqli_real_escape_string($conn, $_POST['comentario']);
+$puntuacion = mysqli_real_escape_string($conn, $_POST['puntuacion']);
 
 // Insertar los datos en la base de datos
 if (!empty($nombre_usuario) && !empty($comentario) && !empty($puntuacion)) {
