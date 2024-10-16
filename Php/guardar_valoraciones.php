@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 // Conectar a la base de datos
 $servername = "localhost";
-$username = "root";
+$username = "root@localhost";
 $password = "pirineus";
 $dbname = "valoraciones_db";
 
