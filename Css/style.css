@@ -246,3 +246,15 @@ footer a:hover {
     max-width: 640px;
     text-align: center;
 }
+
+.valoraciones-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.valoraciones-form label {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #ffffff;
+}
