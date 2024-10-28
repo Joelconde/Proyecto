@@ -8,3 +8,11 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "valoraciones_db";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Conexión fallida: " .$conn->connect_error);
+}
+
+// Recibir los datos de contactos y sacarlos para evitar errores.
