@@ -6,8 +6,14 @@ en blanco te saldra en rojo, pero si rellena el campo te saldra de color gris. *
         const inputs = this.querySelectorAll('input[required], textarea[required]');
         inputs.forEach(input => {
             if (!input.value.trim()) {
-                
+                isValid = false;
+                input.style.borderColor = 'red';
+            } else {
+                input.style.borderColor = '#ddd';
             }
+        });
+        if (!isValid) {
+            
         }
 
 
