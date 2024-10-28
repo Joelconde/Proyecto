@@ -13,8 +13,7 @@ en blanco te saldra en rojo, pero si rellena el campo te saldra de color gris. *
             }
         });
         if (!isValid) {
-            
+           event.preventDefault();
+           alert('Por favor, completa todos los campos requeridos');            
         }
-
-
-}
+});
