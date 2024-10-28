@@ -16,3 +16,18 @@ if ($conn->connect_error) {
 }
 
 // Recibir los datos de contactos y sacarlos para evitar errores.
+$nombre = $conn->real_escape_string($_POST['nombre']);
+$correo = $conn->real_escape_string($_POST['correo']);
+$mensaje = $conn->real_escape_string($_POST['mensaje']);
+
+// Insertar los datos en la base de datos
+$sql = "INSERT INTO contacto (nombre, correo, mensaje) VALUES ('$nombre','$correo','$mensaje')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Contacto guardado con éxito";
+} else {
+    echo "Error: " .$sql. "<br>" .$conn->error;
+}
+
+$conn->close();
+?>
