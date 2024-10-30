@@ -15,6 +15,7 @@ if ($conn->connect_error) {
     die("Conexión fallida: " .$conn->connect_error);
 }
 
+if (isset($_POST['nombre']) && isset($_POST['correo']) && isset($_POST['mensaje'])) {
 // Recibir los datos de contactos y sacarlos para evitar errores.
 $nombre = $conn->real_escape_string($_POST['nombre']);
 $correo = $conn->real_escape_string($_POST['correo']);
@@ -27,6 +28,9 @@ if ($conn->query($sql) === TRUE) {
     echo "Contacto guardado con éxito";
 } else {
     echo "Error: " .$sql. "<br>" .$conn->error;
+}
+} else {
+    echo "Todos los campos son obligatorios.";
 }
 
 $conn->close();
