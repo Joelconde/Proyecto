@@ -16,9 +16,9 @@ if ($conn->connect_error) {
 }
 
 // Recibir los datos de contactos y sacarlos para evitar errores.
-$nombre = $conn->real_escape_string($conn, $_POST['nombre']);
-$correo = $conn->real_escape_string($conn, $_POST['correo']);
-$mensaje = $conn->real_escape_string($conn, $_POST['mensaje']);
+$nombre = $conn->real_escape_string($_POST['nombre']);
+$correo = $conn->real_escape_string($_POST['correo']);
+$mensaje = $conn->real_escape_string($_POST['mensaje']);
 
 // Insertar los datos en la base de datos
 $sql = "INSERT INTO contacto (nombre, correo, mensaje) VALUES ('$nombre','$correo','$mensaje')";
