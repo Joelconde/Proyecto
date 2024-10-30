@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors',1);
+/*ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
@@ -34,4 +34,4 @@ if (isset($_POST['nombre']) && isset($_POST['correo']) && isset($_POST['mensaje'
     echo "Todos los campos son obligatorios.";
 }
 $conn->close();
-?>
+?>*/
