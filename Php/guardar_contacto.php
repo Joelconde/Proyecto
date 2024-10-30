@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 }
 
 // Recibir los datos de contactos y sacarlos para evitar errores.
-$nombre = $conn->real_escape_string($_POST['nombre']);
+$nombre = $conn->real_escape_string($conn, $_POST['nombre']);
 $correo = $conn->real_escape_string($_POST['correo']);
 $mensaje = $conn->real_escape_string($_POST['mensaje']);
 
