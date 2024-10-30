@@ -10,7 +10,7 @@ $password = "";
 $dbname = "valoraciones_db";
 
 // Crear la conexión
-$conn = mysqli_connect_error($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Verificar la conexión
 if (!$conn) {
