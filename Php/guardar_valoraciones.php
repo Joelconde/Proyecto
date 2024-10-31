@@ -7,8 +7,8 @@ include 'conexion.php';
 
 // Conectar a la base de datos
 $servername = "localhost";
-$username = "root";
-$password = "pirineus";
+$username = "user";
+$password = "@Mvm2016";
 $dbname = "valoraciones_db";
 
 // Crear la conexión

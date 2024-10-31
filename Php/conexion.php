@@ -4,8 +4,8 @@ ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "user";
+$password = "@Mvm2016";
 $dbname = "valoraciones_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
