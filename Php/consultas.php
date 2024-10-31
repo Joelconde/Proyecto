@@ -3,7 +3,7 @@ ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
-include '/home/isard/Documents/guardar_valoraciones.php';
+include '/Php/guardar_valoraciones.php';
 
 // Insertar datos 
 $sql = "INSERT INTO valoraciones (nombre, comentario, puntuacion) VALUES ('iker','tope','3')";
