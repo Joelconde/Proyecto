@@ -4,7 +4,6 @@ ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
 include 'conexion.php';
-include 'guardar_valoraciones.php';
 
 // Insertar datos 
 $sql = "INSERT INTO valoraciones (nombre, comentario, puntuacion) VALUES ('iker','tope','3')";
@@ -16,7 +15,7 @@ if ($conn->query($sql) === TRUE) {
 
 
 // Leer datos
-$sql = "SELECT nombre, comentario, puntuacion FROM valoraciones";
+$sql = "SELECT id, nombre, comentario, puntuacion FROM valoraciones";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
