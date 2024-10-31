@@ -2,7 +2,7 @@
 include 'guardar_valoraciones.php';
 
 // Insertar datos 
-$sql = 'INSERT INTO valoraciones (nombre, comentario, puntuacion) VALUES ('Iker','tope','3')';
+$sql = "INSERT INTO valoraciones (nombre, comentario, puntuacion) VALUES ('iker','tope','3')";
 if ($conn->query($sql) === TRUE) {
     echo "Nuevo registro creado";
 } else {
