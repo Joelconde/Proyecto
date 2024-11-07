@@ -6,13 +6,13 @@ error_reporting(E_ALL);
 include 'conexion.php';
 
 //Conectar a la base de datos
-$servername = "localhost:3306";
+$servername = "127.0.0.1";
 $username = "user";
 $password = "@Mvm2016";
 $dbname = "valoraciones_db";
 
 // Crear la conexión
-$conn = mysqli_connect("localhost:3306", "user", "@Mvm2016", "valoraciones_db");
+$conn = mysqli_connect("127.0.0.1", "user", "@Mvm2016", "valoraciones_db");
 
 // Verificar la conexión
 if (!$conn) {
