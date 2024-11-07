@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 include 'conexion.php';
 
-/* Conectar a la base de datos
+//Conectar a la base de datos
 $servername = "localhost";
 $username = "user";
 $password = "@Mvm2016";
@@ -17,7 +17,7 @@ $conn = mysqli_connect("localhost", "root", "pirineus", "valoraciones_db");
 // Verificar la conexión
 if (!$conn) {
     die("Conexión fallida: " . mysqli_connect_error());
-}*/
+}
 
 // Recibir los datos del formulario y escaparlos para evitar errores SQL.
 $nombre_usuario = mysqli_real_escape_string($conn, $_POST['nombre_usuario']);
