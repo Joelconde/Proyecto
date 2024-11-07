@@ -38,7 +38,14 @@ if (!empty($_POST['nombre_usuario']) && !empty($_POST['comentario']) &&
     } else {
         echo "Error al guardar la valoración: " .$stmt->error;
     }
+
+    // Cerrar la declaración
+    $stmt->close();
+    } else {
+        echo "Error en la preparación de la consulta: ".$conn->error;
     }
+} else {
+    echo "Todos los campos son obligatorios.";
 }
 
 // Cerrar la conexión
