@@ -25,6 +25,11 @@ if (!empty($_POST['nombre_usuario']) && !empty($_POST['comentario']) &&
     $nombre_usuario = $_POST['nombre_usuario'];
     $comentario = $_POST['comentario'];
     $puntuacion = $_POST['puntuacion'];
+
+    // Preparamos la consulta SQL para evitar fugas
+    $stmt = $conn->prepare("INSERT INTO valoraciones (nombre, comentario, puntuacion) VALUES (?, ?, ?)");
+
+    
 }
 
 // Insertar los datos en la base de datos
