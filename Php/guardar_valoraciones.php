@@ -12,7 +12,7 @@ $password = "@Mvm2016";
 $dbname = "valoraciones_db";
 
 // Crear la conexión
-$conn = mysqli_connect("127.0.0.1", "user", "@Mvm2016", "valoraciones_db");
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Verificar la conexión
 if (!$conn) {
@@ -45,7 +45,7 @@ if (!empty($_POST['nombre_usuario']) && !empty($_POST['comentario']) &&
         echo "Error en la preparación de la consulta: ".$conn->error;
     }
 } else {
-    echo "Todos los campos son obligatorios.";
+    echo "Todos los campos son obligatorios. ";
 }
 
 // Cerrar la conexión
