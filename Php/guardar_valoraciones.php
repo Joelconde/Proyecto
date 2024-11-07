@@ -20,9 +20,12 @@ if (!$conn) {
 }
 
 // Recibir los datos del formulario y escaparlos para evitar errores SQL.
-$nombre_usuario = mysqli_real_escape_string($conn, $_POST['nombre_usuario']);
-$comentario = mysqli_real_escape_string($conn, $_POST['comentario']);
-$puntuacion = (int)$_POST['puntuacion'];
+if (!empty($_POST['nombre_usuario']) && !empty($_POST['comentario']) &&
+!empty($_POST['puntuacion'])) {
+    $nombre_usuario = $_POST['nombre_usuario'];
+    $comentario = $_POST['comentario'];
+    $puntuacion = $_POST['puntuacion'];
+}
 
 // Insertar los datos en la base de datos
 if (!empty($nombre_usuario) && !empty($comentario) && !empty($puntuacion)) {
