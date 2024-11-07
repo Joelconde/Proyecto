@@ -29,21 +29,16 @@ if (!empty($_POST['nombre_usuario']) && !empty($_POST['comentario']) &&
     // Preparamos la consulta SQL para evitar fugas
     $stmt = $conn->prepare("INSERT INTO valoraciones (nombre, comentario, puntuacion) VALUES (?, ?, ?)");
 
-    
-}
+    if ($stmt) {
+    // Ligar los parámetros y ejecutar la consulta
+    $stmt->bind_param("ssi",$nombre_usuario,$comentario,$puntuacion);
 
-// Insertar los datos en la base de datos
-if (!empty($nombre_usuario) && !empty($comentario) && !empty($puntuacion)) {
-$sql = "INSERT INTO valoraciones (nombre,comentario,puntuacion) VALUES
-('$nombre_usuario','$comentario','$puntuacion')";
-
-if (mysqli_query($conn, $sql)) {
-    echo "Valoración guardad con éxito";
-} else {
-    echo"Error: ".$sql. "<br>". mysqli_error($conn);
-}
-} else {
-    echo "Todos los campos son obligatorios. ";
+    if ($stmt->execute()) {
+        echo "La valoración ha sido guardada.";
+    } else {
+        echo "Error al guardar la valoración: " .$stmt->error;
+    }
+    }
 }
 
 // Cerrar la conexión
