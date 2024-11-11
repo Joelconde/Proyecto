@@ -35,5 +35,7 @@ if (isset($_POST['nombre']) && isset($_POST['correo']) && isset($_POST['mensaje'
 } else {
     echo "Todos los campos son obligatorios.";
 }
-$conn->close();
+
+// Cerrar la conexión
+mysqli_close($conn);    
 ?>
