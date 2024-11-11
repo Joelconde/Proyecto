@@ -34,7 +34,7 @@ if (!empty($_POST['nombre_usuario']) && !empty($_POST['comentario']) &&
     $stmt->bind_param("ssi",$nombre_usuario,$comentario,$puntuacion);
 
     if ($stmt->execute()) {
-        echo "La valoración ha sido guardada.";
+        echo "La valoración ha sido guardada. ";
     } else {
         echo "Error al guardar la valoración: " .$stmt->error;
     }

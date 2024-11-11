@@ -1,15 +1,15 @@
 <?php
-/*ini_set('display_errors',1);
+ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
 // Conectar a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "127.0.0.1";
+$username = "user";
+$password = "@Mvm2016";
 $dbname = "valoraciones_db";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Conexión fallida: " .$conn->connect_error);
@@ -34,4 +34,4 @@ if (isset($_POST['nombre']) && isset($_POST['correo']) && isset($_POST['mensaje'
     echo "Todos los campos son obligatorios.";
 }
 $conn->close();
-?>*/
+?>
