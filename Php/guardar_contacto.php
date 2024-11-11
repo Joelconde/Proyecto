@@ -16,7 +16,6 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Conexión fallida: " .$conn->connect_error);
 }
-echo "Conexion exitosa";
 
 if (isset($_POST['nombre']) && isset($_POST['correo']) && isset($_POST['mensaje'])) {
     // Recibir los datos de contactos y sacarlos para evitar errores.
