@@ -47,6 +47,27 @@
         </div>
     </div>
 
+    <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta o simplemente quieres decir hola? ¡Escríbeme!</p>
+        <form action="../Php/guardar_contacto.php" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="correo" placeholder="Tu correo" required>
+            <textarea name="mensaje" rows="5"  placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section id="valoraciones">
+        <h2>Deja tu Valoración</h2>
+        <form action="../Php/guardar_valoraciones.php" method="POST" class="valoraciones-form">
+            <input type="text" id="nombre" name="nombre_usuario" placeholder="Tu nombre" required>
+            <textarea id="comentario" name="comentario" placeholder="Si te ha gustado nuestro servicio, déjanos tu valoración" rows="5" required></textarea>
+            <input type="number" id="puntuacion" name="puntuacion" min="1" max="5" placeholder="1" required>
+            <button type="submit">Enviar valoración</button>
+        </form>
+    </section>
+
     <footer>
         <p>Sígueme en redes sociales:</p>
         <div class="social-icons">
