@@ -428,7 +428,7 @@ footer {
 }
 
 .header .nav-links li a:hover{
-    color: #f169fd;
+    color: #c269fd;
 }
 
 .header .btn button{
@@ -444,6 +444,6 @@ footer {
 
 .header .btn button:hover{
     background-color: #e2f1f8;
-    color: #ffbc0e;
+    color: #c269fd;
     transform: scale(1.1);
 }
