@@ -4,6 +4,6 @@ window.onscroll - function(){
         .classList.add('show');
     } else {
         document.querySelector('.go-top-container')
-        .classList.add('show');
+        .classList.remove('show');
     }
 }
