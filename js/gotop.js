@@ -3,6 +3,7 @@ window.onscroll - function(){
         document.querySelector('.go-top-container')
         .classList.add('show');
     } else {
-        
+        document.querySelector('.go-top-container')
+        .classList.add('show');
     }
 }
