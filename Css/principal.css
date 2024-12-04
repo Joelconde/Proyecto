@@ -50,11 +50,11 @@ hr {
     transition: opacity 0.5s ease-in-out;
 }
 
-.carousel-content {
+/*.carousel-content {
     background-color: rgba(30, 30, 30, 0.8);
     padding: 20px;
     border-radius: 10px;
-}
+}*/
 
 .carousel-content h2 {
     font-size: 36px;
