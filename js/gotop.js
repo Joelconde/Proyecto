@@ -23,10 +23,10 @@ $(document).ready(function () {
 function irArriba() {
     $('.ir-arriba').click(function () {
         $('body,html').animate({
-            scrollTop: '0px'
+            scrollTop:'0px'
         }, 1000);
     });
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         if ($(this).scrollTop() > 0) {
             $('.ir-arriba').slideDown(600);
         } else {
@@ -35,7 +35,7 @@ function irArriba() {
     });
     $('.ir-abajo').click(function () {
         $('body,html').animate({
-            scrollTop: '1000px'
-        }, 1000);
+            scrollTop:'1000px'
+        },1000);
     });
 }
