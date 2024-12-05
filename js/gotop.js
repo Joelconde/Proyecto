@@ -16,7 +16,9 @@ document.querySelector('.go-top-container')
     });
 });*/
 
-$(document).ready(function () { irArriba(); });
+$(document).ready(function () { 
+    irArriba(); 
+});
 
 function irArriba() {
     $('.ir-arriba').click(function () {
