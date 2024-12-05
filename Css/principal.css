@@ -449,7 +449,7 @@ footer {
     transform: scale(1.1);
 }
 
-/*.go-top-container {
+.go-top-container {
     position: fixed;
     bottom: 2rem;
     right: 4rem;
@@ -510,17 +510,4 @@ footer {
         width: 4rem;
         height: 4rem;
     }
-}*/
-
-/*Flecha para hacer la pagina hacia arriba*/
-.ir-arriba {
-    display: none;
-    background-repeat: no-repeat;
-    font-size: 20px;
-    color: blue;
-    cursor: pointer;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 2;
 }
