@@ -453,7 +453,7 @@ footer {
     position: fixed;
     bottom: 4rem;
     width: 6.6rem;
-    height: 6.6;
+    height: 6.6rem;
     z-index: -1;
 }
 
@@ -470,7 +470,7 @@ footer {
     z-index: -1;
 }
 
-.go-top-button i{
+.go-top-button i {
     position: absolute;
     font-size: 1.7rem;
     top: 48%;
@@ -480,7 +480,7 @@ footer {
     transition: .2s;
 }
 
-.show{
+.show {
     z-index: 10;
 }
 
@@ -491,7 +491,7 @@ footer {
     z-index: 11;
 }
 
-.show i{
+.show i {
     transform: translate(-50%, -50%) scale(0);
 }
 
