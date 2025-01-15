@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Inicio de Sesion y Registro</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css/principal.css">
 </head>
@@ -21,7 +21,6 @@
                 <li><a href="valoracion.html">VALORACIONES</a></li>
             </ul>
         </nav>
-        <a class="btn" href="../Html/inicio_registro.html"><button>Inicio de Sesion</button></a>
         <a class="btn" href="../Html/contacto.html"><button>Contact</button></a>
     </header>
 
@@ -42,13 +41,10 @@
     </div>
 
     <section id="contact" class="contact">
-        <h2>CONTACTO</h2>
+        <h2>INICIO DE SESION</h2>
         <p></p>
-        <form action="../Php/guardar_contacto.php" method="POST">
-            <input type="text" name="nombre" placeholder="Tu nombre" required>
-            <input type="email" name="correo" placeholder="Tu correo" required>
-            <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
-            <button type="submit">Enviar</button>
+        <form action="../Php/guardar_inicio.php" method="POST">
+        
         </form>
     </section>
 
