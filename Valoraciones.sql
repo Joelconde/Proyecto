@@ -18,11 +18,13 @@ CREATE TABLE contacto (
     fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE inicio_sesion {
-  usuario VARCHAR(255) NOT NULL,
-  correo VARCHAR(255) NOT NULL UNIQUE,
-  contraseña  
-};
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(50) NOT NULL,
+    correo VARCHAR(50) NOT NULL UNIQUE,
+    contraseña VARCHAR(255) NOT NULL
+);
+
 
 
 
