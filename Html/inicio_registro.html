@@ -44,7 +44,11 @@
         <h2>INICIO DE SESION</h2>
         <p></p>
         <form action="../Php/guardar_iniciosesion.php" method="POST">
-        
+            <input type="text" name="usuario" placeholder="Pon tu usuario" required>
+            <input type="email" name="correo" placeholder="Pone tu correo electronico" required>
+            <input type="contraseña" name="contraseña" placeholder="Pon tu contraseña" required>
+            <button type="submit">Iniciar Sesion</button>
+            <p>¿No tienes cuenta?</p>
         </form>
     </section>
 
