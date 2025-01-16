@@ -11,30 +11,25 @@ $username = "izeta3php";
 $password = "Camello@33";
 $dbname = "valoraciones_db";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$usuario = $_POST['usuario'];
+$correo = $_POST['correo'];
+$contraseña = password_hash($_POST['contraseña'], PASSWORD_DEFAULT); // Hasheamos la contraseña para mayor seguridad
 
-if ($conn->connect_error) {
-    die("Conexión fallida: " .$conn->connect_error);
-}
+// Check if the email already exists
+$sql_check = "SELECT * FROM usuarios WHERE correo='$correo'";
+$result = $conn->query($sql_check);
 
-if (isset($_POST['usuario']) && isset($_POST['correo']) && isset($_POST['contraseña'])) {
-    // Recibir los datos de contactos y sacarlos para evitar errores.
-    $nombre = $conn->real_escape_string($_POST['usuario']);
-    $correo = $conn->real_escape_string($_POST['correo']);
-    $mensaje = $conn->real_escape_string($_POST['contraseña']);
-    
-    // Insertar los datos en la base de datos
-    $sql = "INSERT INTO inicio_sesion (usuario, correo, contraseña) VALUES ('$usuario','$correo','$contraseña')";
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "Contacto guardado con éxito";
-    } else {
-        echo "Error: " .$sql. "<br>" .$conn->error;
-    }
+if ($result->num_rows > 0) {
+    echo "El correo electrónico ya está registrado.";
 } else {
-    echo "Todos los campos son obligatorios.";
+    $sql = "INSERT INTO usuarios (usuario, correo, contraseña) VALUES ('$usuario', '$correo', '$contraseña')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Nuevo registro creado exitosamente";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 }
 
-// Cerrar la conexión
-mysqli_close($conn);    
+$conn->close();
 ?>
