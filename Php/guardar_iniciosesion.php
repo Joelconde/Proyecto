@@ -11,25 +11,34 @@ $username = "izeta3php";
 $password = "Camello@33";
 $dbname = "valoraciones_db";
 
+// Crear la conexión
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Verificar la conexión
+if (!$conn) {
+    die("Conexión fallida: " . mysqli_connect_error());
+}
+
 $usuario = $_POST['usuario'];
 $correo = $_POST['correo'];
-$contraseña = password_hash($_POST['contraseña'], PASSWORD_DEFAULT); // Hasheamos la contraseña para mayor seguridad
+$contraseña = $_POST['contraseña']; 
 
-// Check if the email already exists
-$sql_check = "SELECT * FROM usuarios WHERE correo='$correo'";
-$result = $conn->query($sql_check);
+// Verificamos si el gmail o correo y el usuario son correctos
+$sql_check = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND correo = '$correo'";
+$result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "El correo electrónico ya está registrado.";
-} else {
-    $sql = "INSERT INTO usuarios (usuario, correo, contraseña) VALUES ('$usuario', '$correo', '$contraseña')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Nuevo registro creado exitosamente";
+    $row = $result->fetch_assoc();
+    if (password_verify($contraseña, $row['contraseña'])) {
+        echo "Inicio de sesión correcto.";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Contraseña incorrecta";
     }
+} else {
+    echo "Usuario no encontrado.";
 }
 
 $conn->close();
 ?>
+
+

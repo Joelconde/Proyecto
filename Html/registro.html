@@ -40,16 +40,15 @@
         </div>
     </div>
 
-    <section id="contact" class="contact">
-        <h2>INICIO DE SESION</h2>
-        <p></p>
-        <form action="../Php/guardar_iniciosesion.php" method="POST">
-            <input type="text" name="usuario" placeholder="Tu usuario" required>
-            <input type="email" name="correo" placeholder="Tu correo electronico" required>
-            <input type="contraseña" name="contraseña" placeholder="Tu contraseña" required>
-            <button type="submit">Iniciar Sesion</button>
-            <p>¿No tienes cuenta? <a href="../Html/registro.html">Regístrate</a></p>
-        </form>
+    <section id="login" class="contact">
+        <h2>REGÍSTRATE</h2> 
+        <p></p> 
+        <form action="../Php/guardar_registro.php" method="POST"> 
+            <input type="text" name="usuario" placeholder="Tu usuario" required> 
+            <input type="email" name="correo" placeholder="Tu correo electrónico" required> 
+            <input type="password" name="contraseña" placeholder="Tu contraseña" required>
+            <button type="submit">Registrarse</button> 
+        </form> 
     </section>
 
     <footer>
