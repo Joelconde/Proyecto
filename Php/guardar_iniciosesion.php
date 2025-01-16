@@ -7,8 +7,8 @@ include 'conexion.php';
 
 // Conectar a la base de datos
 $servername = "127.0.0.1";
-$username = "izeta3php";
-$password = "Camello@33";
+$username = "user";
+$password = "@Mvm2016";
 $dbname = "valoraciones_db";
 
 // Crear la conexión
@@ -25,7 +25,7 @@ $contraseña = $_POST['contraseña'];
 
 // Verificamos si el gmail o correo y el usuario son correctos
 $sql_check = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND correo = '$correo'";
-$result = $conn->query($sql);
+$result = $conn->query($sql_check);
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
