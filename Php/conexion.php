@@ -10,11 +10,9 @@ $dbname = "valoraciones_db";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-// Supongamos que tienes una lógica de autenticación aquí
-if ($_POST['username'] == 'user' && $_POST['password'] == 'pass') {
-  echo "Inicio de sesión exitoso";
-} else {
-  echo "Nombre de usuario o contraseña incorrectos";
+if ($conn->connect_error) {
+    die("Conexion fallida: ". mysqli_connect_error());
 }
-
+echo "Conexion Correcta ";
 ?>
+
